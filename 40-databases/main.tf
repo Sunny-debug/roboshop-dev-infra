@@ -12,20 +12,20 @@ resource "aws_instance" "mongodb" {
 }
 
 resource "terraform_data" "mongodb" {
-    triggers_replace = [    
+    triggers_replace = [
         aws_instance.mongodb.id
     ]
 
     connection {
-      type = "ssh"
-      user = "ec2-user"
+      type     = "ssh"
+      user     = "ec2-user"
       password = "DevOps321"
-      host = aws_instance.mongodb.private_ip
+      host     = aws_instance.mongodb.private_ip
     }
 
     provisioner "remote-exec" {
-      inline = [ 
-        echo ,"MongoDB instance created successfully"
-       ]
+      inline = [
+        "echo MongoDB instance created successfully"
+      ]
     }
 }
