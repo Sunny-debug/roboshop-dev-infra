@@ -7,7 +7,7 @@ terraform {
   }
   backend "s3" {
     bucket         = "amzn-dawgs-s3"
-    key            = "roboshop-dev-catalogue-alb"
+    key            = "roboshop-dev-catalogue"
     region         = "us-east-1"
     # Optional: Enable state locking with DynamoDB
     # dynamodb_table = "my-lock-table"
