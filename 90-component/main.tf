@@ -1,5 +1,5 @@
 module "components" {
-  source = "../terraform-roboshop-component"
+  source = "../../terraform-roboshop-component"
   component = var.component
   rule_priority = var.rule_priority
   project_name = var.project_name
