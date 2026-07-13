@@ -20,7 +20,7 @@ variable "sg_names" {
     #Bastion SGs
     "bastion",
     #frontend load balancer SGs
-    "frontend_lb",
+    "frontend_alb",
 
     #backend App load balancer SGs
     "backend_alb"
